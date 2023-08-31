@@ -26,7 +26,7 @@ const cargarPeliculas = async () => {
         if (respuesta.status === 200) { 
             const datos = await respuesta.json();
             let peliculas = "";
-            datos.forEach(pelicula => {
+            datos.results.forEach(pelicula => {
                 peliculas +=  `
                 <div class="pelicula">
                     <img class="poster" src="http://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="">
